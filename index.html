@@ -312,9 +312,12 @@ Infrastructure<br>
     <br>
     <label style="width:50%">Durability:</label><input type="text" id="durability" name="Durability" style="width:50%">
     <br>
+    <br>
     <button type="button" id="btnenvvalue" style="background-color: cornsilk;width:48%">Enviroment</button>
     <input type="text" id="envvalue" name="envvalue" style="width:46%"> %
     <div>
+    <br>
+    <br>    
      <label style="width:50%;">Ability to construct</label><input type="text" id="txtAbConst" name="txtAbConst" style="width:50%">
      <br>
      <br>
@@ -592,7 +595,11 @@ $(document).ready(function() {
            var soil = $("#txtsoilPercentage").val();
            var heat = $("#txtheatPercentage").val();
            var gw = $("#txtgroundwaterPercentage").val();
-           var result = Number(noise) + Number(air) + Number(soil) + Number(heat) + Number(gw) ;
+           var performance = $("#performance").val();
+           var quality = $("#quality").val();
+           var durability = $("#durability").val();
+         
+           var result = Number(noise) + Number(air) + Number(soil) + Number(heat) + Number(gw) + Number(performance) + Number(quality) + Number(durability) ;
            $("#envvalue").val(result);
         });
     function calculateEnviroment() {
