@@ -160,599 +160,598 @@
         </div>
     </nav>
 </header>
-<div b-0r8dmesa67="" class="container">
-    <main b-0r8dmesa67="" role="main" class="pb-3">
-        <table>
- <tbody><tr>
-  <th style="width:35%;color:green;"><h3> General </h3></th>
-  <th style="width:35%;color:green;"><h3> TIME </h3></th>
-  <th style="width:35%;color:green;"><h3> Value </h3></th>
- </tr>
- <tr>
-  <td style="width:35%"> 
-    <input name="rbtCost" type="radio" value="Planning"> Planning<br>
-    <input name="rbtCost" type="radio" value="Evaluation" checked=""> Evaluation <br>
-   <br>
-   <br>
-   <h6 style="color:blue">Type</h6>
-                    <input name="ProjectType" type="radio" value="Building" checked=""> 
-Building<br>
-                    <input name="ProjectType" type="radio" value="Infrastructure"> 
-Infrastructure<br>
-   <br>
-   <h6 style="color:blue">Plan Type</h6>
-                        <input name="PlanType" type="radio" value="1" checked=""> New<br>
-                        <input name="PlanType" type="radio" value="2"> Diverting<br>
-   <br>
-   <h6 style="color: blue">Utilites</h6>
-   <select id="ddlutilites" name="ddlutilites"><option value="1">Water</option>
-<option value="2">Sewage</option>
-<option value="3">Other</option>
-</select>
-            
-   <br>
-   <h6 style="color: blue">Material</h6>
-   <div style="width:50%">
-    <select id="ddlmaterial" name="ddlmaterial"><option value="-1">Select Value</option>
-<option value="1">UPVC</option>
-<option value="2">HDPE</option>
-<option value="3">Cast Iron</option>
-<option value="4">Concrete</option>
-<option value="5">Steel</option>
-<option value="6">Clay</option>
-<option value="7">Asbestos</option>
-</select>
-   </div>
-   <br>
-   <h6 style="color: blue">Diameter</h6>
-   <div style="width:50%">
-    <select id="ddldiameter" name="ddldiameter"><option value="25">25</option>
-<option value="32">32</option>
-<option value="40">40</option>
-<option value="50">50</option>
-<option value="63">63</option>
-<option value="75">75</option>
-<option value="80">80</option>
-<option value="100">100</option>
-<option value="110">110</option>
-<option value="125">125</option>
-<option value="150">150</option>
-<option value="160">160</option>
-<option value="200">200</option>
-<option value="250">250</option>
-<option value="300">300</option>
-<option value="350">350</option>
-<option value="375">375</option>
-<option value="400">400</option>
-<option value="450">450</option>
-<option value="500">500</option>
-<option value="600">600</option>
-<option value="700">700</option>
-<option value="800">800</option>
-<option value="900">900</option>
-<option value="1000">1000</option>
-</select> mm
-   </div>
-   <br>
-   <h6 style="color:blue">Construction Type</h6>
-                            <input name="ConstructionType" type="radio" value="Building suspended" checked=""> Building suspended<br>
-                            <input name="ConstructionType" type="radio" value="Building underground &lt; 10 m"> Building underground &lt; 10 m<br>
-                            <input name="ConstructionType" type="radio" value="Building underground &gt; 10 m"> Building underground &gt; 10 m<br>
-                            <input name="ConstructionType" type="radio" value="Building rested"> Building rested<br>
-  </td>
-  <td style="width:35%"> 
-   <div name="time">
-    <label style="width:30%">Time weight:</label>
-    <input type="number" id="timewight" name="timewight" style="width:30%"> %
-    <br>
-    <label style="width:30%">Target year:</label>
-    <input type="number" id="targetyear" name="targetyear" style="width:30%"> days
-    <br>
-    <label style="width:30%">Construction Time:</label>
-    <input type="number" id="projectperiod" name="projectperiod" style="width:30%"> days
-    <br>
-    <br>
-    <button type="button" id="btncalculatetimevalue" style="background-color: cornsilk;width:30%">Time Value</button>
-    <input type="text" id="timevalue" name="timevalue" style="width:30%"> %
-    <br>
-    <br>
-    <br>
-    <br>
-    <h3 style="color: green"> Cost </h3>
-    <br>
-    <div name="divCost" id="divCost">
-     <label style="width:30%">Cost weight</label>
-     <input type="text" id="txtCostWeight" name="txtCostWeight" style="width:30%"> %
-     <br>
-     <label style="width:30%">Initial</label>
-     <input type="text" id="txtinitialcost" name="txtinitialcost" style="width:30%"> $/m
-     <br>
-     <label style="width:30%">Construction</label>
-     <input type="text" id="txtConstructionCost" name="txtConstructionCost" style="width:30%"> $/m
-     <br>
-     <label style="width:30%">Maintaince</label>
-     <input type="text" id="txtMaintanaceCost" name="txtMaintanaceCost" style="width:30%"> $/m
-     <br>
+<div id="FirstStep" class="container" style="background-color:oldlace">
+    <div name="divCostFirstStep" id="divCostFirstStep">
+        <label style="width:100%;color:indianred;font-weight:bold">
+            This questionaire is to be filled out by expertise in the field, the evaluation from (1-10) where 1 is the minimum weight and 10 is the maximum
+        </label>
+        <br>
+        <label style="width:10%;color:green;font-weight:bold">Initial Cost</label>
+        <input type="text" id="txtCostWeightF" name="txtCostWeightF" style="width:10%"> %
+        <br>
+        <label style="width: 10%; color: green;font-weight: bold">Initial</label>
+        <input type="text" id="txtinitialcostF" name="txtinitialcostF" style="width:10%"> $/m
+        <br>
+        <label style="width: 10%; color: green;font-weight: bold">Construction</label>
+        <input type="text" id="txtConstructionCostF" name="txtConstructionCostF" style="width:10%"> $/m
+        <br>
+        <label style="width: 10%;color: green;font-weight: bold">Maintaince</label>
+        <input type="text" id="txtMaintanaceCostF" name="txtMaintanaceCostF" style="width:10%"> $/m
+        <button type="button" id="btncalculateCostByExp" style="background-color: cornsilk;width:10%">Next</button>
     </div>
-    <label style="width:30%">Real</label>
-    <input type="text" id="txtRealCost" name="txtRealCost" style="width:30%">
-    <br>
-    <br>
-    <br>
-    <button type="button" id="btnEvaluatetotalcost" style="background-color:cornsilk;width:30%">Cost value</button>
-    <input type="text" id="txtCostTotal" name="txtCostTotal" style="width:30%"><label>%</label>
-    <br>
-    <input type="text" id="txtunit" name="txtunit" style="width:30%;visibility: hidden">
-   </div>
-  </td>
-  <td style="width:35%"> 
-   <div>
-    <br>
-    <h6 style="color:blue">Enviroment</h6>
-    <label style="width:50%">Noise pollution:</label><input type="text" id="txtnoise" name="txtnoise" style="width:20%">
-    <input type="text" id="txtnoisePercentage" name="txtnoisePercentage" style="width:20%"> %
-    <br>
-    <label style="width:50%">Air pollution:</label><input type="text" id="txtair" name="txtair" style="width:20%">
-    <input type="text" id="txtairPercentage" name="txtairPercentage" style="width:20%"> %
-    <br>
-    <label style="width:50%">Soil pollution:</label><input type="text" id="txtsoil" name="txtsoil" style="width:20%">
-    <input type="text" id="txtsoilPercentage" name="txtsoilPercentage" style="width:20%"> %
-    <br>
-    <label style="width:50%">Heat pollution:</label><input type="text" id="txtheat" name="txtheat" style="width:20%">
-    <input type="text" id="txtheatPercentage" name="txtheatPercentage" style="width:20%"> %
-    <br>
-    <label style="width:49%">Ground water pollution:</label>
-    <input type="text" id="txtgroundwater" name="txtgroundwater" style="width:20%">
-    <input type="text" id="txtgroundwaterPercentage" name="txtgroundwaterPercentage" style="width:20%"> 
-   </div>
-   <div name="Value">
-    <label style="width:50%">Performance:</label><input type="text" id="performance" name="performance" style="width:50%">
-    <br>
-    <label style="width:50%">Quality:</label><input type="text" id="quality" name="quality" style="width:50%">
-    <br>
-    <label style="width:50%">Durability:</label><input type="text" id="durability" name="Durability" style="width:50%">
-    <br>
-    <br>
-    <button type="button" id="btnenvvalue" style="background-color: cornsilk;width:48%">Enviroment</button>
-    <input type="text" id="envvalue" name="envvalue" style="width:46%"> %
-    <div>
-    <br>
-    <br>    
-     <label style="width:50%;">Ability to construct</label><input type="text" id="txtAbConst" name="txtAbConst" style="width:50%">
-     <br>
-     <br>
-     <label style="width:50%;color:red">Value</label><input type="text" id="txtAbConsttotal" name="txtAbConsttotal" style="width:50%">
-     <br>
-     <br>
-     <button type="button" id="btnprojectvalue" style="background-color: cornsilk;width:48%">Project Value</button>
-     <input type="text" id="txtprojectvalue" name="txtprojectvalue" style="width:47%">%
-    </div>
-   </div>
-  </td>
- </tr>
- <tr>
-  <td style="width:35%">
-
-  </td>
-  <td style="width:35%">
-
-  </td>
-  <td style="width:35%">
-
-  </td>
- </tr>
- <tr>
-  <td style="width:35%">
-           
-  </td>
-  <td style="width:35%"></td>
-  <td style="width:35%">
-  </td>
- </tr>
-</tbody></table>
-<br>
-<div id="divresult" name="divresult" style="visibility: hidden;">
- <label style="color: #0b5ed7;font-size: medium">Project Brief</label>
- <br> 
- <label> Total evaluation for this project is : </label><label id="txtProjectEvaluation"></label> %
-  <br>
-  <label style="color: #0a53be">This is :</label><label id="lblProjectID"> </label><label> Project </label>
-  <br>
-  <label style="color: #0a53be"> Project Type :</label><label id="lblProjectType"></label>
- <br>
- <label style="color: #0a53be"> Construction Type :</label> <label id="lblConstructionType"></label>
- <br>
-   <label style="color: #0a53be"> Material:</label>  <label id="lblMaterialType"></label>
 </div>
+        <div id="divmain" b-0r8dmesa67="" class="container" style="visibility:hidden">
+            <main b-0r8dmesa67="" role="main" class="pb-3">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th style="width:35%;color:green;"><h3> General </h3></th>
+                            <th style="width:35%;color:green;"><h3> TIME </h3></th>
+                            <th style="width:35%;color:green;"><h3> Value </h3></th>
+                        </tr>
+                        <tr>
+                            <td style="width:35%">
+                                <input name="rbtCost" type="radio" value="Planning"> Planning<br>
+                                <input name="rbtCost" type="radio" value="Evaluation" checked=""> Evaluation <br>
+                                <br>
+                                <br>
+                                <h6 style="color:blue">Type</h6>
+                                <input name="ProjectType" type="radio" value="Building" checked="">
+                                Building<br>
+                                <input name="ProjectType" type="radio" value="Infrastructure">
+                                Infrastructure<br>
+                                <br>
+                                <h6 style="color:blue">Plan Type</h6>
+                                <input name="PlanType" type="radio" value="1" checked=""> New<br>
+                                <input name="PlanType" type="radio" value="2"> Diverting<br>
+                                <br>
+                                <h6 style="color: blue">Utilites</h6>
+                                <select id="ddlutilites" name="ddlutilites">
+                                    <option value="1">Water</option>
+                                    <option value="2">Sewage</option>
+                                    <option value="3">Other</option>
+                                </select>
 
-    </main>
-</div>
+                                <br>
+                                <h6 style="color: blue">Material</h6>
+                                <div style="width:50%">
+                                    <select id="ddlmaterial" name="ddlmaterial">
+                                        <option value="-1">Select Value</option>
+                                        <option value="1">UPVC</option>
+                                        <option value="2">HDPE</option>
+                                        <option value="3">Cast Iron</option>
+                                        <option value="4">Concrete</option>
+                                        <option value="5">Steel</option>
+                                        <option value="6">Clay</option>
+                                        <option value="7">Asbestos</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <h6 style="color: blue">Diameter</h6>
+                                <div style="width:50%">
+                                    <select id="ddldiameter" name="ddldiameter">
+                                        <option value="25">25</option>
+                                        <option value="32">32</option>
+                                        <option value="40">40</option>
+                                        <option value="50">50</option>
+                                        <option value="63">63</option>
+                                        <option value="75">75</option>
+                                        <option value="80">80</option>
+                                        <option value="100">100</option>
+                                        <option value="110">110</option>
+                                        <option value="125">125</option>
+                                        <option value="150">150</option>
+                                        <option value="160">160</option>
+                                        <option value="200">200</option>
+                                        <option value="250">250</option>
+                                        <option value="300">300</option>
+                                        <option value="350">350</option>
+                                        <option value="375">375</option>
+                                        <option value="400">400</option>
+                                        <option value="450">450</option>
+                                        <option value="500">500</option>
+                                        <option value="600">600</option>
+                                        <option value="700">700</option>
+                                        <option value="800">800</option>
+                                        <option value="900">900</option>
+                                        <option value="1000">1000</option>
+                                    </select> mm
+                                </div>
+                                <br>
+                                <h6 style="color:blue">Construction Type</h6>
+                                <input name="ConstructionType" type="radio" value="Building suspended" checked=""> Building suspended<br>
+                                <input name="ConstructionType" type="radio" value="Building underground &lt; 10 m"> Building underground &lt; 10 m<br>
+                                <input name="ConstructionType" type="radio" value="Building underground &gt; 10 m"> Building underground &gt; 10 m<br>
+                                <input name="ConstructionType" type="radio" value="Building rested"> Building rested<br>
+                            </td>
+                            <td style="width:35%">
+                                <div name="time">
+                                    <label style="width:30%">Time weight:</label>
+                                    <input type="number" id="timewight" name="timewight" style="width:30%"> %
+                                    <br>
+                                    <label style="width:30%">Target year:</label>
+                                    <input type="number" id="targetyear" name="targetyear" style="width:30%"> days
+                                    <br>
+                                    <label style="width:30%">Construction Time:</label>
+                                    <input type="number" id="projectperiod" name="projectperiod" style="width:30%"> days
+                                    <br>
+                                    <br>
+                                    <button type="button" id="btncalculatetimevalue" style="background-color: cornsilk;width:30%">Time Value</button>
+                                    <input type="text" id="timevalue" name="timevalue" style="width:30%"> %
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 style="color: green"> Cost </h3>
+                                    <br>
+                                    <div name="divCost" id="divCost">
+                                        <label style="width:30%">Cost weight</label>
+                                        <input type="text" id="txtCostWeight" name="txtCostWeight" style="width:30%"> %
+                                        <br>
+                                        <label style="width:30%">Initial</label>
+                                        <input type="text" id="txtinitialcost" name="txtinitialcost" style="width:30%"> $/m
+                                        <br>
+                                        <label style="width:30%">Construction</label>
+                                        <input type="text" id="txtConstructionCost" name="txtConstructionCost" style="width:30%"> $/m
+                                        <br>
+                                        <label style="width:30%">Maintaince</label>
+                                        <input type="text" id="txtMaintanaceCost" name="txtMaintanaceCost" style="width:30%"> $/m
+                                        <br>
+                                    </div>
+                                    <label style="width:30%">Real</label>
+                                    <input type="text" id="txtRealCost" name="txtRealCost" style="width:30%">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <button type="button" id="btnEvaluatetotalcost" style="background-color:cornsilk;width:30%">Cost value</button>
+                                    <input type="text" id="txtCostTotal" name="txtCostTotal" style="width:30%"><label>%</label>
+                                    <br>
+                                    <input type="text" id="txtunit" name="txtunit" style="width:30%;visibility: hidden">
+                                </div>
+                            </td>
+                            <td style="width:35%">
+                                <div>
+                                    <br>
+                                    <h6 style="color:blue">Enviroment</h6>
+                                    <label style="width:50%">Noise pollution:</label><input type="text" id="txtnoise" name="txtnoise" style="width:20%">
+                                    <input type="text" id="txtnoisePercentage" name="txtnoisePercentage" style="width:20%"> %
+                                    <br>
+                                    <label style="width:50%">Air pollution:</label><input type="text" id="txtair" name="txtair" style="width:20%">
+                                    <input type="text" id="txtairPercentage" name="txtairPercentage" style="width:20%"> %
+                                    <br>
+                                    <label style="width:50%">Soil pollution:</label><input type="text" id="txtsoil" name="txtsoil" style="width:20%">
+                                    <input type="text" id="txtsoilPercentage" name="txtsoilPercentage" style="width:20%"> %
+                                    <br>
+                                    <label style="width:50%">Heat pollution:</label><input type="text" id="txtheat" name="txtheat" style="width:20%">
+                                    <input type="text" id="txtheatPercentage" name="txtheatPercentage" style="width:20%"> %
+                                    <br>
+                                    <label style="width:49%">Ground water pollution:</label>
+                                    <input type="text" id="txtgroundwater" name="txtgroundwater" style="width:20%">
+                                    <input type="text" id="txtgroundwaterPercentage" name="txtgroundwaterPercentage" style="width:20%">
+                                </div>
+                                <div name="Value">
+                                    <label style="width:50%">Performance:</label><input type="text" id="performance" name="performance" style="width:50%">
+                                    <br>
+                                    <label style="width:50%">Quality:</label><input type="text" id="quality" name="quality" style="width:50%">
+                                    <br>
+                                    <label style="width:50%">Durability:</label><input type="text" id="durability" name="Durability" style="width:50%">
+                                    <br>
+                                    <br>
+                                    <button type="button" id="btnenvvalue" style="background-color: cornsilk;width:48%">Enviroment</button>
+                                    <input type="text" id="envvalue" name="envvalue" style="width:46%"> %
+                                    <div>
+                                        <br>
+                                        <br>
+                                        <label style="width:50%;">Ability to construct</label><input type="text" id="txtAbConst" name="txtAbConst" style="width:50%">
+                                        <br>
+                                        <br>
+                                        <label style="width:50%;color:red">Value</label><input type="text" id="txtAbConsttotal" name="txtAbConsttotal" style="width:50%">
+                                        <br>
+                                        <br>
+                                        <button type="button" id="btnprojectvalue" style="background-color: cornsilk;width:48%">Project Value</button>
+                                        <input type="text" id="txtprojectvalue" name="txtprojectvalue" style="width:47%">%
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:35%">
+                            </td>
+                            <td style="width:35%">
+                            </td>
+                            <td style="width:35%">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:35%">
+                            </td>
+                            <td style="width:35%"></td>
+                            <td style="width:35%">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div id="divresult" name="divresult" style="visibility: hidden;">
+                    <label style="color: #0b5ed7;font-size: medium">Project Brief</label>
+                    <br>
+                    <label> Total evaluation for this project is : </label><label id="txtProjectEvaluation"></label> %
+                    <br>
+                    <label style="color: #0a53be">This is :</label><label id="lblProjectID"> </label><label> Project </label>
+                    <br>
+                    <label style="color: #0a53be"> Project Type :</label><label id="lblProjectType"></label>
+                    <br>
+                    <label style="color: #0a53be"> Construction Type :</label> <label id="lblConstructionType"></label>
+                    <br>
+                    <label style="color: #0a53be"> Material:</label>  <label id="lblMaterialType"></label>
+                </div>
 
-<footer b-0r8dmesa67="" class="border-top footer text-muted">
-    <div b-0r8dmesa67="" class="container">
-        © 2022 - infraProject - <a href="https://localhost:7212/Home/Privacy">Privacy</a>
-    </div>
-</footer>
-<script src="./src/jquery.min.js.download"></script>
-<script src="./src/bootstrap.bundle.min.js.download"></script>
-<script src="./src/site.js.download"></script>
+            </main>
+        </div>
+        <footer b-0r8dmesa67="" class="border-top footer text-muted">
+            <div b-0r8dmesa67="" class="container">
+                © 2022 - infraProject - <a href="https://localhost:7212/Home/Privacy">Privacy</a>
+            </div>
+        </footer>
+        <script src="./src/jquery.min.js.download"></script>
+        <script src="./src/bootstrap.bundle.min.js.download"></script>
+        <script src="./src/site.js.download"></script>
 
- <script type="text/javascript">
-$(document).ready(function() {
+        <script type="text/javascript">
+            $(document).ready(function () {
 
- document.getElementById("divresult").style.visibility = 'hidden';
+                document.getElementById("divresult").style.visibility = 'hidden';
 
- $('#txtunit').val("1")
- $('#txtnoise').val("NO")
- $('#txtair').val("NO")
- $('#txtsoil').val("NO")
- $('#txtgroundwater').val("NO")
- $('#txtheat').val("Low")
-  $("#ddlmaterial").change(function () {
-   $('#txtunit').val('');
-        var selObjMaterial = document.getElementById("ddlmaterial");
-                var slectedMaterial = selObjMaterial.options[selObjMaterial.selectedIndex].value;
-             
-                       if(slectedMaterial === "1"){$('#txtheat').val("NO");$('#txtsoil').val("Low");$('#txtsoilPercentage').val("1.5");$('#txtnoisePercentage').val("2");$('#txtheatPercentage').val("2");$('#txtairPercentage').val("2");$('#txtgroundwater').val("Low");$('#txtgroundwaterPercentage').val("1.5");$('#durability').val("5");$('#txtAbConst').val("Easy");$('#performance').val("5");$('#quality').val("5")}
-                       else if(slectedMaterial === "2"){$('#txtheat').val("NO");$('#txtsoil').val("Low");$('#txtsoilPercentage').val("1.5");$('#txtnoisePercentage').val("2");$('#txtheatPercentage').val("2");$('#txtairPercentage').val("2");$('#txtgroundwater').val("Low");$('#txtgroundwaterPercentage').val("1.5");$('#durability').val("5");$('#txtAbConst').val("Easy");$('#performance').val("5");$('#quality').val("5")}
-                        else if(slectedMaterial === "3"){$('#txtheat').val("NO");$('#txtsoil').val("Medium");$('#txtsoilPercentage').val("1");$('#txtnoisePercentage').val("2");$('#txtnoisePercentage').val("2");$('#txtheatPercentage').val("2");$('#txtairPercentage').val("2");$('#txtgroundwater').val("NO");$('#txtgroundwaterPercentage').val("2");$('#durability').val("5");$('#txtAbConst').val("Difficult");$('#performance').val("5");$('#quality').val("3")}
-                         else if(slectedMaterial === "4"){$('#txtheat').val("NO");$('#txtsoil').val("Low");$('#txtsoilPercentage').val("1.5");$('#txtnoisePercentage').val("2");$('#txtheatPercentage').val("2");$('#txtairPercentage').val("2");$('#txtgroundwater').val("Low");$('#txtgroundwaterPercentage').val("1.5");$('#durability').val("4");$('#txtAbConst').val("Difficult");$('#performance').val("5");$('#quality').val("4")}
-                          else if(slectedMaterial === "5"){$('#txtheat').val("NO");$('#txtsoil').val("Medium");$('#txtsoilPercentage').val("1");$('#txtnoisePercentage').val("2");$('#txtheatPercentage').val("2");$('#txtairPercentage').val("2");$('#txtgroundwater').val("Medium");$('#txtgroundwaterPercentage').val("1");$('#durability').val("4");$('#txtAbConst').val("Difficult");$('#performance').val("5");$('#quality').val("5")}
-                           else if(slectedMaterial === "6"){$('#txtheat').val("NO");$('#txtsoil').val("Low");$('#txtsoilPercentage').val("1.5");$('#txtnoisePercentage').val("2");$('#txtheatPercentage').val("2");$('#txtairPercentage').val("2");$('#txtgroundwater').val("Low");$('#txtgroundwaterPercentage').val("1.5");$('#durability').val("2");$('#txtAbConst').val("Difficult");$('#performance').val("3");$('#quality').val("2")}
-                           else if(slectedMaterial === "7"){$('#txtheat').val("NO");$('#txtsoil').val("High");$('#txtsoilPercentage').val("0");$('#txtnoisePercentage').val("2");$('#txtheatPercentage').val("2");$('#txtairPercentage').val("2");$('#txtgroundwater').val("High");$('#txtgroundwaterPercentage').val("0");$('#durability').val("1");$('#txtAbConst').val("Difficult");$('#performance').val("3");$('#quality').val("0")}
-                           
-                           calculateEnviroment();
-                           calculateAbConst();
-                           $("#txtinitialcost").val('');
-                           $("#initialcostresult").val('');
-                              
-     });
-   $('input[type=radio][name=rbtCost]').change(function() {
-    debugger;
-              if (this.value === "1") {
-                  $('#divCost').hide();
-                   $('#btnEvaluatetotalcost').hide();  
-                   $('#txtRealCost').val("");
-                    $('#txtRealCost').hide();
-              }else if (this.value === "2") {
-                   $('#divCost').show();
-                   $('#txtCostTotal').val("");
-                   $('#btnEvaluatetotalcost').show();      
-                   $('#txtinitialcost').val("");
-                   $('#txtConstructionCost').val("");
-                   $('#txtMaintanaceCost').val("");
-                   $('#txtRealCost').show();
-              }
-          });
-    $("#btcalcinitialcost").click(function(){
-       var intialval = $("#txtinitialcost").val();
-       var u = $('#txtunit').val();
-       var result = intialval * u;
-       $('#initialcostresult').val(result);
-    }); 
-    $("#btnprojectvalue").click(function(){
+                $('#txtunit').val("1")
+                $('#txtnoise').val("NO")
+                $('#txtair').val("NO")
+                $('#txtsoil').val("NO")
+                $('#txtgroundwater').val("NO")
+                $('#txtheat').val("Low")
+                $("#ddlmaterial").change(function () {
+                    $('#txtunit').val('');
+                    var selObjMaterial = document.getElementById("ddlmaterial");
+                    var slectedMaterial = selObjMaterial.options[selObjMaterial.selectedIndex].value;
 
-     isValid=true;
-     if($("#txtCostTotal").val() == "")
-     {
-     isValid = false;
-     document.getElementById("txtCostTotal").style.border = "2px dashed red"
-     }
-     else
-     document.getElementById("txtCostTotal").style.border = ""
-                       
-     if($("#timevalue").val() == "")
-        {
-          isValid = false;
-          document.getElementById("timevalue").style.border = "2px dashed red"
-          }
-          else
-          document.getElementById("timevalue").style.border = ""
-          
-     if($("#envvalue").val() == "")
-        {
-        isValid = false;
-        document.getElementById("envvalue").style.border = "2px dashed red"
-        }
-        else
-         document.getElementById("envvalue").style.border = ""
-         
-         if($("#performance").val() == "")
-                 {
-                 isValid = false;
-                 document.getElementById("performance").style.border = "2px dashed red"
-                 }
-                 else
-                  document.getElementById("performance").style.border = ""
-                  
-         if($("#quality").val() == "")
-         {
-           isValid = false;
-           document.getElementById("quality").style.border = "2px dashed red"
-           }
-           else
-           document.getElementById("quality").style.border = ""
-               
-       if($("#durability").val() == "")
-       {
-        isValid = false;
-        document.getElementById("durability").style.border = "2px dashed red"
-         }
-        else
-         document.getElementById("durability").style.border = ""  
-          
-          if($("#ddlmaterial").val() == "-1")
-                 {
-                  isValid = false;
-                  alert("Please select a valid material type!")
-                   }
-                  else
-                   document.getElementById("ddlmaterial").style.border = ""  
-                   
-       if(!isValid)
-         {
-          alert("Please check the missing values")
-          return
-          }
-           var cost = $("#txtCostTotal").val();
-           var time = $('#timevalue').val();
-           var env = $('#envvalue').val();
-           var performance = $('#performance').val(); 
-           var quality = $('#quality').val(); 
-           var durability = $('#durability').val(); 
-           var result = Number(cost) + Number(time) + Number(env) + Number(performance) + Number(quality) + Number(durability)
-           $('#txtprojectvalue').val(Math.round(result));
-         
-           document.getElementById("divresult").style.visibility = 'visible';
-           debugger;
-           if (result > 100){
+                    if (slectedMaterial === "1") { $('#txtheat').val("NO"); $('#txtsoil').val("Low"); $('#txtsoilPercentage').val("1.5"); $('#txtnoisePercentage').val("2"); $('#txtheatPercentage').val("2"); $('#txtairPercentage').val("2"); $('#txtgroundwater').val("Low"); $('#txtgroundwaterPercentage').val("1.5"); $('#durability').val("5"); $('#txtAbConst').val("Easy"); $('#performance').val("5"); $('#quality').val("5") }
+                    else if (slectedMaterial === "2") { $('#txtheat').val("NO"); $('#txtsoil').val("Low"); $('#txtsoilPercentage').val("1.5"); $('#txtnoisePercentage').val("2"); $('#txtheatPercentage').val("2"); $('#txtairPercentage').val("2"); $('#txtgroundwater').val("Low"); $('#txtgroundwaterPercentage').val("1.5"); $('#durability').val("5"); $('#txtAbConst').val("Easy"); $('#performance').val("5"); $('#quality').val("5") }
+                    else if (slectedMaterial === "3") { $('#txtheat').val("NO"); $('#txtsoil').val("Medium"); $('#txtsoilPercentage').val("1"); $('#txtnoisePercentage').val("2"); $('#txtnoisePercentage').val("2"); $('#txtheatPercentage').val("2"); $('#txtairPercentage').val("2"); $('#txtgroundwater').val("NO"); $('#txtgroundwaterPercentage').val("2"); $('#durability').val("5"); $('#txtAbConst').val("Difficult"); $('#performance').val("5"); $('#quality').val("3") }
+                    else if (slectedMaterial === "4") { $('#txtheat').val("NO"); $('#txtsoil').val("Low"); $('#txtsoilPercentage').val("1.5"); $('#txtnoisePercentage').val("2"); $('#txtheatPercentage').val("2"); $('#txtairPercentage').val("2"); $('#txtgroundwater').val("Low"); $('#txtgroundwaterPercentage').val("1.5"); $('#durability').val("4"); $('#txtAbConst').val("Difficult"); $('#performance').val("5"); $('#quality').val("4") }
+                    else if (slectedMaterial === "5") { $('#txtheat').val("NO"); $('#txtsoil').val("Medium"); $('#txtsoilPercentage').val("1"); $('#txtnoisePercentage').val("2"); $('#txtheatPercentage').val("2"); $('#txtairPercentage').val("2"); $('#txtgroundwater').val("Medium"); $('#txtgroundwaterPercentage').val("1"); $('#durability').val("4"); $('#txtAbConst').val("Difficult"); $('#performance').val("5"); $('#quality').val("5") }
+                    else if (slectedMaterial === "6") { $('#txtheat').val("NO"); $('#txtsoil').val("Low"); $('#txtsoilPercentage').val("1.5"); $('#txtnoisePercentage').val("2"); $('#txtheatPercentage').val("2"); $('#txtairPercentage').val("2"); $('#txtgroundwater').val("Low"); $('#txtgroundwaterPercentage').val("1.5"); $('#durability').val("2"); $('#txtAbConst').val("Difficult"); $('#performance').val("3"); $('#quality').val("2") }
+                    else if (slectedMaterial === "7") { $('#txtheat').val("NO"); $('#txtsoil').val("High"); $('#txtsoilPercentage').val("0"); $('#txtnoisePercentage').val("2"); $('#txtheatPercentage').val("2"); $('#txtairPercentage').val("2"); $('#txtgroundwater').val("High"); $('#txtgroundwaterPercentage').val("0"); $('#durability').val("1"); $('#txtAbConst').val("Difficult"); $('#performance').val("3"); $('#quality').val("0") }
+
+                    calculateEnviroment();
+                    calculateAbConst();
+                    $("#txtinitialcost").val('');
+                    $("#initialcostresult").val('');
+
+                });
+                $('input[type=radio][name=rbtCost]').change(function () {
+                    debugger;
+                    if (this.value === "1") {
+                        $('#divCost').hide();
+                        $('#btnEvaluatetotalcost').hide();
+                        $('#txtRealCost').val("");
+                        $('#txtRealCost').hide();
+                    } else if (this.value === "2") {
+                        $('#divCost').show();
+                        $('#txtCostTotal').val("");
+                        $('#btnEvaluatetotalcost').show();
+                        $('#txtinitialcost').val("");
+                        $('#txtConstructionCost').val("");
+                        $('#txtMaintanaceCost').val("");
+                        $('#txtRealCost').show();
+                    }
+                });
+                $("#btcalcinitialcost").click(function () {
+                    var intialval = $("#txtinitialcost").val();
+                    var u = $('#txtunit').val();
+                    var result = intialval * u;
+                    $('#initialcostresult').val(result);
+                });
+                $("#btncalculateCostByExp").click(function () {
+                    document.getElementById("divmain").style.visibility = "visible"
+                });
+                $("#btnprojectvalue").click(function () {
+
+                    isValid = true;
+                    if ($("#txtCostTotal").val() == "") {
+                        isValid = false;
+                        document.getElementById("txtCostTotal").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("txtCostTotal").style.border = ""
+
+                    if ($("#timevalue").val() == "") {
+                        isValid = false;
+                        document.getElementById("timevalue").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("timevalue").style.border = ""
+
+                    if ($("#envvalue").val() == "") {
+                        isValid = false;
+                        document.getElementById("envvalue").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("envvalue").style.border = ""
+
+                    if ($("#performance").val() == "") {
+                        isValid = false;
+                        document.getElementById("performance").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("performance").style.border = ""
+
+                    if ($("#quality").val() == "") {
+                        isValid = false;
+                        document.getElementById("quality").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("quality").style.border = ""
+
+                    if ($("#durability").val() == "") {
+                        isValid = false;
+                        document.getElementById("durability").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("durability").style.border = ""
+
+                    if ($("#ddlmaterial").val() == "-1") {
+                        isValid = false;
+                        alert("Please select a valid material type!")
+                    }
+                    else
+                        document.getElementById("ddlmaterial").style.border = ""
+
+                    if (!isValid) {
+                        alert("Please check the missing values")
+                        return
+                    }
+                    var cost = $("#txtCostTotal").val();
+                    var time = $('#timevalue').val();
+                    var env = $('#envvalue').val();
+                    var performance = $('#performance').val();
+                    var quality = $('#quality').val();
+                    var durability = $('#durability').val();
+                    var result = Number(cost) + Number(time) + Number(env) + Number(performance) + Number(quality) + Number(durability)
+                    $('#txtprojectvalue').val(Math.round(result));
+
+                    document.getElementById("divresult").style.visibility = 'visible';
+                    debugger;
+                    if (result > 100) {
                         debugger;
                         alert("Project evaluation couldn't exceed 100%. Please review the values.")
                         document.getElementById("divresult").style.visibility = 'hidden';
-                       }
-           
-            if (result > 70 ){
-             document.getElementById("txtProjectEvaluation").style.color = "green";
-                }
-            else{
-             document.getElementById("txtProjectEvaluation").style.color = "red";
-            }
-            debugger;
-            var slectedMaterial = $("#ddlmaterial").val() ;
-            if (slectedMaterial == 7 )
-            {
-             document.getElementById("lblMaterialType").style.color = "red";
-               $('#lblMaterialType').text("Asbestos material affectes the project evaluation negatively");
-            }         
-            else if (slectedMaterial == 3){
-             document.getElementById("lblMaterialType").style.color = "#FFC300";
-              $('#lblMaterialType').text("Cast Iron");
-            }
-            else if (slectedMaterial == 1){
-             document.getElementById("lblMaterialType").style.color = "green";
-                           $('#lblMaterialType').text("UPVC material selected ");
-            }
-            else if (slectedMaterial == 2){
-                         document.getElementById("lblMaterialType").style.color = "green";
-                                       $('#lblMaterialType').text("UPVC material selected ");
-                        }
-             $("#txtProjectEvaluation").text(String(Math.round(result)) );
-             $("#lblProjectID").text(document.querySelector('input[name="rbtCost"]:checked').value);
-             $("#lblProjectType").text(document.querySelector('input[name="ProjectType"]:checked').value);
-            $("#lblConstructionType").text(document.querySelector('input[name="ConstructionType"]:checked').value);  
-            
-        }); 
-     $("#btnenvvalue").click(function(){
-      var isValid = true;
-                  if($("#txtnoisePercentage").val() == "")
-                  {
-                      isValid = false;
-                     document.getElementById("txtnoisePercentage").style.border = "2px dashed red"
-                  }
-                  else
-                  document.getElementById("txtnoisePercentage").style.border = ""
-            
-                  if($("#txtairPercentage").val() == "")
-                  {
-                      isValid = false;
-                     document.getElementById("txtairPercentage").style.border = "2px dashed red"
-                  }
-                  else
-                  document.getElementById("txtairPercentage").style.border = ""
-            
-                  if($("#txtsoilPercentage").val() == "")
-                     {
-                       isValid = false;
-                       document.getElementById("txtsoilPercentage").style.border = "2px dashed red"
-                     }
-                        else
+                    }
+
+                    if (result > 70) {
+                        document.getElementById("txtProjectEvaluation").style.color = "green";
+                    }
+                    else {
+                        document.getElementById("txtProjectEvaluation").style.color = "red";
+                    }
+                    debugger;
+                    var slectedMaterial = $("#ddlmaterial").val();
+                    if (slectedMaterial == 7) {
+                        document.getElementById("lblMaterialType").style.color = "red";
+                        $('#lblMaterialType').text("Asbestos material affectes the project evaluation negatively");
+                    }
+                    else if (slectedMaterial == 3) {
+                        document.getElementById("lblMaterialType").style.color = "#FFC300";
+                        $('#lblMaterialType').text("Cast Iron");
+                    }
+                    else if (slectedMaterial == 1) {
+                        document.getElementById("lblMaterialType").style.color = "green";
+                        $('#lblMaterialType').text("UPVC material selected ");
+                    }
+                    else if (slectedMaterial == 2) {
+                        document.getElementById("lblMaterialType").style.color = "green";
+                        $('#lblMaterialType').text("UPVC material selected ");
+                    }
+                    $("#txtProjectEvaluation").text(String(Math.round(result)));
+                    $("#lblProjectID").text(document.querySelector('input[name="rbtCost"]:checked').value);
+                    $("#lblProjectType").text(document.querySelector('input[name="ProjectType"]:checked').value);
+                    $("#lblConstructionType").text(document.querySelector('input[name="ConstructionType"]:checked').value);
+
+                });
+                $("#btnenvvalue").click(function () {
+                    var isValid = true;
+                    if ($("#txtnoisePercentage").val() == "") {
+                        isValid = false;
+                        document.getElementById("txtnoisePercentage").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("txtnoisePercentage").style.border = ""
+
+                    if ($("#txtairPercentage").val() == "") {
+                        isValid = false;
+                        document.getElementById("txtairPercentage").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("txtairPercentage").style.border = ""
+
+                    if ($("#txtsoilPercentage").val() == "") {
+                        isValid = false;
+                        document.getElementById("txtsoilPercentage").style.border = "2px dashed red"
+                    }
+                    else
                         document.getElementById("txtsoilPercentage").style.border = ""
-                       
-                        if($("#txtheatPercentage").val() == "")
-                         {
-                            isValid = false;
-                            document.getElementById("txtheatPercentage").style.border = "2px dashed red"
-                         }
-                         else
-                         document.getElementById("txtheatPercentage").style.border = ""
-                         
-                          if($("#txtgroundwaterPercentage").val() == "")
-                           {
-                             isValid = false;
-                             document.getElementById("txtgroundwaterPercentage").style.border = "2px dashed red"
-                           }
-                            else
-                            document.getElementById("txtgroundwaterPercentage").style.border = ""
-                                          
-                  if(!isValid)
-                  {
-                     alert("Please check the missing values")
-                     return
-                  }
-                  
-           var noise = $("#txtnoisePercentage").val();
-           var air = $("#txtairPercentage").val();
-           var soil = $("#txtsoilPercentage").val();
-           var heat = $("#txtheatPercentage").val();
-           var gw = $("#txtgroundwaterPercentage").val();
-           var performance = $("#performance").val();
-           var quality = $("#quality").val();
-           var durability = $("#durability").val();
-         
-           var result = Number(noise) + Number(air) + Number(soil) + Number(heat) + Number(gw) + Number(performance) + Number(quality) + Number(durability) ;
-           $("#envvalue").val(result);
-        });
-    function calculateEnviroment() {
-         var noise = $('#txtnoise').val();
-                var air = $('#txtair').val();
-                var soil = $('#txtsoil').val();
-                var groundWater = $('#txtgroundwater').val();
-                const oneAndOnlyTwoNO = arr => arr.filter(v => v >= "NO").length === 2;
-                 debugger;
-                if( noise ==="YES" && air==="YES" &&  soil==="YES" && groundWater==="YES"){$('#envvalue').val("0")}
-                else if(noise ==="NO" && air==="NO" &&  soil==="NO" && groundWater==="NO"){$('#envvalue').val("16.65")}
-                else if (noise ==="YES" && air==="YES" &&  soil==="NO" && groundWater==="NO"){$('#envvalue').val("8.325")}
-                 else if (noise ==="NO" && air==="NO" &&  soil==="YES" && groundWater==="YES"){$('#envvalue').val("8.325")}
-                 else if(oneAndOnlyTwoNO === true){$('#envvalue').val("8.325")}
-    }
-    function calculateAbConst(){
-      var val = $("#txtAbConst").val();
-               if(val ==="Easy"){
-                $("#txtAbConsttotal").val("11.11")
-               }
-               else{$("#txtAbConsttotal").val("0.0")}
-    }
-    
-     $("#btnEvaluatetotalcost").click(function(){
-       var isValid = true;
-      
-            if($("#txtinitialcost").val() == "")
-            {
-                isValid = false;
-               document.getElementById("txtinitialcost").style.border = "2px dashed red"
-            }
-            else
-            document.getElementById("txtinitialcost").style.border = ""
-      
-            if($("#txtConstructionCost").val() == "")
-            {
-                isValid = false;
-               document.getElementById("txtConstructionCost").style.border = "2px dashed red"
-            }
-            else
-            document.getElementById("txtConstructionCost").style.border = ""
-      
-             if($("#txtMaintanaceCost").val() == "")
-                  {
-                      isValid = false;
-                     document.getElementById("txtMaintanaceCost").style.border = "2px dashed red"
-                  }
-                  else
-                  document.getElementById("txtMaintanaceCost").style.border = ""
-                 
-                  if($("#txtRealCost").val() == "")
-                  {
-                   isValid = false;
-                   document.getElementById("txtRealCost").style.border = "2px dashed red"
-                  }
-                  else
-                  document.getElementById("txtRealCost").style.border = ""
-                  
-                  if($("#txtCostWeight").val() == "")
-                  {
-                  isValid = false;
-                  document.getElementById("txtCostWeight").style.border = "2px dashed red"
-                  }
-                  else
-                  document.getElementById("txtCostWeight").style.border = ""
-                                    
-            if(!isValid)
-            {
-               alert("Please check the missing values")
-               return
-            }
-      
-           var intialval = $("#txtinitialcost").val();
-           var constructionCost = $('#txtConstructionCost').val();
-           var maintaceCost = $('#txtMaintanaceCost').val();
-           var costweight = $('#txtCostWeight').val();
-           var realCost = $('#txtRealCost').val();
-           total = Number(intialval) + Number(constructionCost) + Number(maintaceCost);
-           var result = ((total/realCost))*100
-           if(result > costweight ){
-             document.getElementById("txtCostWeight").style.border = "2px dashed red"
-             document.getElementById("txtCostTotal").style.border = "2px dashed red"
-             alert("The estimated cost less than the calculated one!")
-           }
-           $('#txtCostTotal').val(Math.round(result));
-              }); 
-     
-     $("#btncalculatetimevalue").click(function(){
 
-      var isValid = true;
+                    if ($("#txtheatPercentage").val() == "") {
+                        isValid = false;
+                        document.getElementById("txtheatPercentage").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("txtheatPercentage").style.border = ""
 
-      if($("#projectperiod").val() == "")
-      {
-          isValid = false;
-         document.getElementById("projectperiod").style.border = "2px dashed red"
-      }
-      else
-      document.getElementById("projectperiod").style.border = ""
+                    if ($("#txtgroundwaterPercentage").val() == "") {
+                        isValid = false;
+                        document.getElementById("txtgroundwaterPercentage").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("txtgroundwaterPercentage").style.border = ""
 
-      if($("#targetyear").val() == "")
-      {
-          isValid = false;
-         document.getElementById("targetyear").style.border = "2px dashed red"
-      }
-      else
-      document.getElementById("targetyear").style.border = ""
- 
-     if($("#timewight").val() == "")
-      {
-          isValid = false;
-         document.getElementById("timewight").style.border = "2px dashed red"
-      }
-      else
-      document.getElementById("timewight").style.border = ""
-      
-      if(!isValid)
-      {
-         alert("Please check the missing values")
-         return
-      }
-      var projectperiod =  $("#projectperiod").val();
-      var targetyear =  $("#targetyear").val();
-      var timeweight = $("#timewight").val();
-      
-      total = (Number(targetyear) / Number(projectperiod)) * 100;
-      if(total > timeweight){
-       alert("Expected time weight is less than the calculated one!")
-       document.getElementById("timewight").style.border = "2px dashed red"
-       document.getElementById("timevalue").style.border = "2px dashed red"
-       $("#timevalue").val(Math.round(total));
-      }
-      else{
-        document.getElementById("timewight").style.border = ""
-         document.getElementById("timevalue").style.border = ""
-       $("#timevalue").val(Math.round(total)); 
-      } 
-     });
-      $("#ddlutilites").change(function () {
-       debugger;
-          var selObjutilites = document.getElementById("ddlutilites");
-                       var slectedutilites = selObjutilites.options[selObjutilites.selectedIndex].value;
-      if( slectedutilites === "3" ){$('#txtnoise').val("YES"); $('#txtair').val("YES")} 
-      else{$('#txtnoise').val("NO");$('#txtair').val("NO")}
-      calculateEnviroment();
-      calculateAbConst();
-      });
-});
-</script>
+                    if (!isValid) {
+                        alert("Please check the missing values")
+                        return
+                    }
+
+                    var noise = $("#txtnoisePercentage").val();
+                    var air = $("#txtairPercentage").val();
+                    var soil = $("#txtsoilPercentage").val();
+                    var heat = $("#txtheatPercentage").val();
+                    var gw = $("#txtgroundwaterPercentage").val();
+                    var performance = $("#performance").val();
+                    var quality = $("#quality").val();
+                    var durability = $("#durability").val();
+
+                    var result = Number(noise) + Number(air) + Number(soil) + Number(heat) + Number(gw) + Number(performance) + Number(quality) + Number(durability);
+                    $("#envvalue").val(result);
+                });
+                function calculateEnviroment() {
+                    var noise = $('#txtnoise').val();
+                    var air = $('#txtair').val();
+                    var soil = $('#txtsoil').val();
+                    var groundWater = $('#txtgroundwater').val();
+                    const oneAndOnlyTwoNO = arr => arr.filter(v => v >= "NO").length === 2;
+                    debugger;
+                    if (noise === "YES" && air === "YES" && soil === "YES" && groundWater === "YES") { $('#envvalue').val("0") }
+                    else if (noise === "NO" && air === "NO" && soil === "NO" && groundWater === "NO") { $('#envvalue').val("16.65") }
+                    else if (noise === "YES" && air === "YES" && soil === "NO" && groundWater === "NO") { $('#envvalue').val("8.325") }
+                    else if (noise === "NO" && air === "NO" && soil === "YES" && groundWater === "YES") { $('#envvalue').val("8.325") }
+                    else if (oneAndOnlyTwoNO === true) { $('#envvalue').val("8.325") }
+                }
+                function calculateAbConst() {
+                    var val = $("#txtAbConst").val();
+                    if (val === "Easy") {
+                        $("#txtAbConsttotal").val("11.11")
+                    }
+                    else { $("#txtAbConsttotal").val("0.0") }
+                }
+
+                $("#btnEvaluatetotalcost").click(function () {
+                    var isValid = true;
+
+                    if ($("#txtinitialcost").val() == "") {
+                        isValid = false;
+                        document.getElementById("txtinitialcost").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("txtinitialcost").style.border = ""
+
+                    if ($("#txtConstructionCost").val() == "") {
+                        isValid = false;
+                        document.getElementById("txtConstructionCost").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("txtConstructionCost").style.border = ""
+
+                    if ($("#txtMaintanaceCost").val() == "") {
+                        isValid = false;
+                        document.getElementById("txtMaintanaceCost").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("txtMaintanaceCost").style.border = ""
+
+                    if ($("#txtRealCost").val() == "") {
+                        isValid = false;
+                        document.getElementById("txtRealCost").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("txtRealCost").style.border = ""
+
+                    if ($("#txtCostWeight").val() == "") {
+                        isValid = false;
+                        document.getElementById("txtCostWeight").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("txtCostWeight").style.border = ""
+
+                    if (!isValid) {
+                        alert("Please check the missing values")
+                        return
+                    }
+
+                    var intialval = $("#txtinitialcost").val();
+                    var constructionCost = $('#txtConstructionCost').val();
+                    var maintaceCost = $('#txtMaintanaceCost').val();
+                    var costweight = $('#txtCostWeight').val();
+                    var realCost = $('#txtRealCost').val();
+                    total = Number(intialval) + Number(constructionCost) + Number(maintaceCost);
+                    var result = ((total / realCost)) * 100
+                    if (result > costweight) {
+                        document.getElementById("txtCostWeight").style.border = "2px dashed red"
+                        document.getElementById("txtCostTotal").style.border = "2px dashed red"
+                        alert("The estimated cost less than the calculated one!")
+                    }
+                    $('#txtCostTotal').val(Math.round(result));
+                });
+
+                $("#btncalculatetimevalue").click(function () {
+
+                    var isValid = true;
+
+                    if ($("#projectperiod").val() == "") {
+                        isValid = false;
+                        document.getElementById("projectperiod").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("projectperiod").style.border = ""
+
+                    if ($("#targetyear").val() == "") {
+                        isValid = false;
+                        document.getElementById("targetyear").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("targetyear").style.border = ""
+
+                    if ($("#timewight").val() == "") {
+                        isValid = false;
+                        document.getElementById("timewight").style.border = "2px dashed red"
+                    }
+                    else
+                        document.getElementById("timewight").style.border = ""
+
+                    if (!isValid) {
+                        alert("Please check the missing values")
+                        return
+                    }
+                    var projectperiod = $("#projectperiod").val();
+                    var targetyear = $("#targetyear").val();
+                    var timeweight = $("#timewight").val();
+
+                    total = (Number(targetyear) / Number(projectperiod)) * 100;
+                    if (total > timeweight) {
+                        alert("Expected time weight is less than the calculated one!")
+                        document.getElementById("timewight").style.border = "2px dashed red"
+                        document.getElementById("timevalue").style.border = "2px dashed red"
+                        $("#timevalue").val(Math.round(total));
+                    }
+                    else {
+                        document.getElementById("timewight").style.border = ""
+                        document.getElementById("timevalue").style.border = ""
+                        $("#timevalue").val(Math.round(total));
+                    }
+                });
+                $("#ddlutilites").change(function () {
+                    debugger;
+                    var selObjutilites = document.getElementById("ddlutilites");
+                    var slectedutilites = selObjutilites.options[selObjutilites.selectedIndex].value;
+                    if (slectedutilites === "3") { $('#txtnoise').val("YES"); $('#txtair').val("YES") }
+                    else { $('#txtnoise').val("NO"); $('#txtair').val("NO") }
+                    calculateEnviroment();
+                    calculateAbConst();
+                });
+            });
+        </script>
 
 
-<!-- Visual Studio Browser Link -->
-<script type="text/javascript" src="https://localhost:44399/51b1ab1432d14e6a826467a50d9f5f6c/browserLink" async="async" id="__browserLink_initializationData" data-requestid="84d27a61a54b471aacb91b1fda51f1fc" data-requestmappingfromserver="False"></script>
-<!-- End Browser Link -->
+        <!-- Visual Studio Browser Link -->
+        <script type="text/javascript" src="https://localhost:44399/51b1ab1432d14e6a826467a50d9f5f6c/browserLink" async="async" id="__browserLink_initializationData" data-requestid="84d27a61a54b471aacb91b1fda51f1fc" data-requestmappingfromserver="False"></script>
+        <!-- End Browser Link -->
 
-<script src="./Home Page - infraProject_files/aspnetcore-browser-refresh.js.download"></script>
-<div class="refunder-rework-slider"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+        <script src="./Home Page - infraProject_files/aspnetcore-browser-refresh.js.download"></script>
+        <div class="refunder-rework-slider"></div>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
