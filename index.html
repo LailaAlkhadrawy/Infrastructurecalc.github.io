@@ -461,7 +461,15 @@
                 });
                 $("#btncalculateCostByExp").click(function () {
                     document.getElementById("divmain").style.visibility = "visible"
+                    var costWeight = $("#txtCostWeightF").val();  
+                    var constructionCostF = $("#txtConstructionCostF").val();  
+                    var MaintanaceCostF = $("#txtMaintanaceCostF").val(); 
+                    total = costWeight + constructionCostF + MaintanaceCostF;
+                    total = total/30 ;                                            
+                                                                     
+                    $('#txtCostWeight').val(Math.round(total));                                 
                 });
+                                                                                   
                 $("#btnprojectvalue").click(function () {
 
                     isValid = true;
