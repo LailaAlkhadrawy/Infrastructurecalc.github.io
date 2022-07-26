@@ -467,9 +467,16 @@
                     var MaintanaceCostF = $("#txtMaintanaceCostF").val(); 
                     total = Number(costWeight) + Number(constructionCostF) + Number(MaintanaceCostF);
                     total = total/30 ;                                            
-                                                                     
-                    $('#txtCostWeight').val(total);    
-                     $('#txtCostWeightFF').val(total);                                                 
+                    
+                    var targetYear = $("#txtCostWeightS").val();                                                  
+                    var constTime = $("#txtinitialcostS").val();   
+                    timetotal = Number(targetYear) + Number(constTime);
+                     timetotal = timetotal/30;
+                                                                                          
+                     $('#txtCostWeight').val(total);    
+                     $('#txtCostWeightFF').val(total);      
+                     $('#txtConstructionCostS').val(total); 
+                     $('#timewight').val(total);                                  
                 });
                                                                                    
                 $("#btnprojectvalue").click(function () {
