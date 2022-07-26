@@ -465,7 +465,7 @@
                     var costWeight = $("#txtCostWeightF").val();  
                     var constructionCostF = $("#txtConstructionCostF").val();  
                     var MaintanaceCostF = $("#txtMaintanaceCostF").val(); 
-                    total = costWeight + constructionCostF + MaintanaceCostF;
+                    total = Number(costWeight) + Number(constructionCostF) + Number(MaintanaceCostF);
                     total = total/30 ;                                            
                                                                      
                     $('#txtCostWeight').val(Math.round(total));                                 
