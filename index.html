@@ -234,82 +234,95 @@
                     <div id="divmain" b-0r8dmesa67="" class="container" style="visibility:hidden;background-color:oldlace">
                         <main b-0r8dmesa67="" role="main" class="pb-3">
                             <div id="generaldiv" name="generaldiv">
-                                <h3> General </h3>
-                                <br>
-                                <input name="rbtCost" type="radio" value="Planning"> Planning<br>
-                                <input name="rbtCost" type="radio" value="Evaluation" checked=""> Evaluation <br>
-                                <br>
-                                <h6 style="color:blue">Type</h6>
-                                <input name="ProjectType" type="radio" value="Building" checked="">
-                                Building
-                                <br>
-                                <input name="ProjectType" type="radio" value="Infrastructure">
-                                Infrastructure
-                                <br>
-                                <br>
-                                <h6 style="color:blue">Plan Type</h6>
-                                <input name="PlanType" type="radio" value="1" checked=""> New<br>
-                                <input name="PlanType" type="radio" value="2"> Diverting<br>
-                                <br>
-                                <h6 style="color: blue">Utilites</h6>
-                                <select id="ddlutilites" name="ddlutilites">
-                                    <option value="1">Water</option>
-                                    <option value="2">Sewage</option>
-                                    <option value="3">Other</option>
-                                </select>
-
-                                <br>
-                                <h6 style="color: blue">Material</h6>
-                                <div style="width:50%">
-                                    <select id="ddlmaterial" name="ddlmaterial">
-                                        <option value="-1">Select Value</option>
-                                        <option value="1">UPVC</option>
-                                        <option value="2">HDPE</option>
-                                        <option value="3">Cast Iron</option>
-                                        <option value="4">Concrete</option>
-                                        <option value="5">Steel</option>
-                                        <option value="6">Clay</option>
-                                        <option value="7">Asbestos</option>
-                                    </select>
-                                </div>
-                                <br>
-                                <h6 style="color: blue">Diameter</h6>
-                                <div style="width:50%">
-                                    <select id="ddldiameter" name="ddldiameter">
-                                        <option value="25">25</option>
-                                        <option value="32">32</option>
-                                        <option value="40">40</option>
-                                        <option value="50">50</option>
-                                        <option value="63">63</option>
-                                        <option value="75">75</option>
-                                        <option value="80">80</option>
-                                        <option value="100">100</option>
-                                        <option value="110">110</option>
-                                        <option value="125">125</option>
-                                        <option value="150">150</option>
-                                        <option value="160">160</option>
-                                        <option value="200">200</option>
-                                        <option value="250">250</option>
-                                        <option value="300">300</option>
-                                        <option value="350">350</option>
-                                        <option value="375">375</option>
-                                        <option value="400">400</option>
-                                        <option value="450">450</option>
-                                        <option value="500">500</option>
-                                        <option value="600">600</option>
-                                        <option value="700">700</option>
-                                        <option value="800">800</option>
-                                        <option value="900">900</option>
-                                        <option value="1000">1000</option>
-                                    </select> mm
-                                </div>
-                                <br>
-                                <h6 style="color:blue">Construction Type</h6>
-                                <input name="ConstructionType" type="radio" value="Building suspended" checked=""> Building suspended<br>
-                                <input name="ConstructionType" type="radio" value="Building underground &lt; 10 m"> Building underground &lt; 10 m<br>
-                                <input name="ConstructionType" type="radio" value="Building underground &gt; 10 m"> Building underground &gt; 10 m<br>
-                                <input name="ConstructionType" type="radio" value="Building rested"> Building rested<br>
-                            </div>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input name="rbtCost" type="radio" value="Planning"> Planning
+                                            </td>
+                                            <td>
+                                                <input name="rbtCost" type="radio" value="Evaluation" checked=""> Evaluation
+                                            </td>
+                                            <td>
+                                                <input name="ProjectType" type="radio" value="Building" checked=""> Building
+                                            </td>
+                                            <td>
+                                                <input name="ProjectType" type="radio" value="Infrastructure">
+                                                Infrastructure
+                                            </td>
+                                            <td>
+                                                <h6 style="color:blue">Plan Type</h6>
+                                                <input name="PlanType" type="radio" value="1" checked=""> New
+                                            </td>
+                                            <td>
+                                                <input name="PlanType" type="radio" value="2"> Diverting
+                                            </td>
+                                            <td>
+                                                <h6 style="color: blue">Utilites</h6>
+                                                <select id="ddlutilites" name="ddlutilites">
+                                                    <option value="1">Water</option>
+                                                    <option value="2">Sewage</option>
+                                                    <option value="3">Other</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <h6 style="color: blue">Material</h6>
+                                                <div style="width:50%">
+                                                    <select id="ddlmaterial" name="ddlmaterial">
+                                                        <option value="-1">Select Value</option>
+                                                        <option value="1">UPVC</option>
+                                                        <option value="2">HDPE</option>
+                                                        <option value="3">Cast Iron</option>
+                                                        <option value="4">Concrete</option>
+                                                        <option value="5">Steel</option>
+                                                        <option value="6">Clay</option>
+                                                        <option value="7">Asbestos</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <select id="ddldiameter" name="ddldiameter">
+                                                    <option value="25">25</option>
+                                                    <option value="32">32</option>
+                                                    <option value="40">40</option>
+                                                    <option value="50">50</option>
+                                                    <option value="63">63</option>
+                                                    <option value="75">75</option>
+                                                    <option value="80">80</option>
+                                                    <option value="100">100</option>
+                                                    <option value="110">110</option>
+                                                    <option value="125">125</option>
+                                                    <option value="150">150</option>
+                                                    <option value="160">160</option>
+                                                    <option value="200">200</option>
+                                                    <option value="250">250</option>
+                                                    <option value="300">300</option>
+                                                    <option value="350">350</option>
+                                                    <option value="375">375</option>
+                                                    <option value="400">400</option>
+                                                    <option value="450">450</option>
+                                                    <option value="500">500</option>
+                                                    <option value="600">600</option>
+                                                    <option value="700">700</option>
+                                                    <option value="800">800</option>
+                                                    <option value="900">900</option>
+                                                    <option value="1000">1000</option>
+                                                </select> mm
+                                            </td>
+                                            <td>
+                                                <h6 style="color:blue">Construction Type</h6>
+                                                <input name="ConstructionType" type="radio" value="Building suspended" checked=""> Building suspended
+                                                <br>
+                                                <input name="ConstructionType" type="radio" value="Building underground &lt; 10 m"> Building underground &lt; 10 m
+                                                <br>
+                                                <input name="ConstructionType" type="radio" value="Building underground &gt; 10 m"> Building underground &gt; 10 m
+                                                <br>
+                                                <input name="ConstructionType" type="radio" value="Building rested"> Building rested
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>                                  
+</div>
          <table>
         <tbody>
             <tr>
@@ -352,18 +365,6 @@
                         <br>
                         <button type="button" id="btncalculatetimevalue" style="background-color: cornsilk;width:30%">Time Value</button>
                         <input type="text" id="timevalue" name="timevalue" style="width:30%"> %
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <h3 style="color: green"> Cost </h3>
-                        <br>
-                       
-                        <br>
-                        <button type="button" id="btnEvaluatetotalcost" style="background-color:cornsilk;width:30%">Cost value</button>
-                        <input type="text" id="txtCostTotal" name="txtCostTotal" style="width:30%"><label>%</label>
-                        <br>
-                        <input type="text" id="txtunit" name="txtunit" style="width:30%;visibility: hidden">
                     </div>
                 </td>
                 <td style="width:35%">
