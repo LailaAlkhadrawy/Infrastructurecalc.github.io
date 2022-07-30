@@ -513,6 +513,12 @@
                                 $('#txtCostWeightFF').val(total);
                                 $('#txtConstructionCostS').val(timetotal);
                                 $('#timewight').val(timetotal);
+
+                                var noisebyexp = Number($("#txtnoisebyExp").val());
+                                if (noisebyexp > 5 || noisebyexp < 1) {
+                                    document.getElementById("txtnoisebyExp").style.border = "2px dashed red"
+                                }
+                                
                             });
 
                             $("#btnprojectvalue").click(function () {
