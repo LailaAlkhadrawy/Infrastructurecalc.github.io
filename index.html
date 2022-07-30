@@ -231,207 +231,217 @@
                         </div>
                     </div>
                     <br>
-                    <div id="divmain" b-0r8dmesa67="" class="container" style="visibility:hidden;background-color:oldlace" ">
+                    <div id="divmain" b-0r8dmesa67="" class="container" style="visibility:hidden;background-color:oldlace">
                         <main b-0r8dmesa67="" role="main" class="pb-3">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <th style="width:35%;color:green;"><h3> General </h3></th>
-                                        <th style="width:35%;color:green;"><h3> TIME </h3></th>
-                                        <th style="width:35%;color:green;"><h3> Value </h3></th>
-                                    </tr>
-                                    <tr>
-                                        <td style="width:35%">
-                                            <input name="rbtCost" type="radio" value="Planning"> Planning<br>
-                                            <input name="rbtCost" type="radio" value="Evaluation" checked=""> Evaluation <br>
-                                            <br>
-                                            <br>
-                                            <h6 style="color:blue">Type</h6>
-                                            <input name="ProjectType" type="radio" value="Building" checked="">
-                                            Building<br>
-                                            <input name="ProjectType" type="radio" value="Infrastructure">
-                                            Infrastructure<br>
-                                            <br>
-                                            <h6 style="color:blue">Plan Type</h6>
-                                            <input name="PlanType" type="radio" value="1" checked=""> New<br>
-                                            <input name="PlanType" type="radio" value="2"> Diverting<br>
-                                            <br>
-                                            <h6 style="color: blue">Utilites</h6>
-                                            <select id="ddlutilites" name="ddlutilites">
-                                                <option value="1">Water</option>
-                                                <option value="2">Sewage</option>
-                                                <option value="3">Other</option>
-                                            </select>
+                            <div id="generaldiv" name="generaldiv">
+                                <h3> General </h3>
+                                <br>
+                                <input name="rbtCost" type="radio" value="Planning"> Planning<br>
+                                <input name="rbtCost" type="radio" value="Evaluation" checked=""> Evaluation <br>
+                                <br>
+                                <h6 style="color:blue">Type</h6>
+                                <input name="ProjectType" type="radio" value="Building" checked="">
+                                Building
+                                <br>
+                                <input name="ProjectType" type="radio" value="Infrastructure">
+                                Infrastructure
+                                <br>
+                                <br>
+                                <h6 style="color:blue">Plan Type</h6>
+                                <input name="PlanType" type="radio" value="1" checked=""> New<br>
+                                <input name="PlanType" type="radio" value="2"> Diverting<br>
+                                <br>
+                                <h6 style="color: blue">Utilites</h6>
+                                <select id="ddlutilites" name="ddlutilites">
+                                    <option value="1">Water</option>
+                                    <option value="2">Sewage</option>
+                                    <option value="3">Other</option>
+                                </select>
 
-                                            <br>
-                                            <h6 style="color: blue">Material</h6>
-                                            <div style="width:50%">
-                                                <select id="ddlmaterial" name="ddlmaterial">
-                                                    <option value="-1">Select Value</option>
-                                                    <option value="1">UPVC</option>
-                                                    <option value="2">HDPE</option>
-                                                    <option value="3">Cast Iron</option>
-                                                    <option value="4">Concrete</option>
-                                                    <option value="5">Steel</option>
-                                                    <option value="6">Clay</option>
-                                                    <option value="7">Asbestos</option>
-                                                </select>
-                                            </div>
-                                            <br>
-                                            <h6 style="color: blue">Diameter</h6>
-                                            <div style="width:50%">
-                                                <select id="ddldiameter" name="ddldiameter">
-                                                    <option value="25">25</option>
-                                                    <option value="32">32</option>
-                                                    <option value="40">40</option>
-                                                    <option value="50">50</option>
-                                                    <option value="63">63</option>
-                                                    <option value="75">75</option>
-                                                    <option value="80">80</option>
-                                                    <option value="100">100</option>
-                                                    <option value="110">110</option>
-                                                    <option value="125">125</option>
-                                                    <option value="150">150</option>
-                                                    <option value="160">160</option>
-                                                    <option value="200">200</option>
-                                                    <option value="250">250</option>
-                                                    <option value="300">300</option>
-                                                    <option value="350">350</option>
-                                                    <option value="375">375</option>
-                                                    <option value="400">400</option>
-                                                    <option value="450">450</option>
-                                                    <option value="500">500</option>
-                                                    <option value="600">600</option>
-                                                    <option value="700">700</option>
-                                                    <option value="800">800</option>
-                                                    <option value="900">900</option>
-                                                    <option value="1000">1000</option>
-                                                </select> mm
-                                            </div>
-                                            <br>
-                                            <h6 style="color:blue">Construction Type</h6>
-                                            <input name="ConstructionType" type="radio" value="Building suspended" checked=""> Building suspended<br>
-                                            <input name="ConstructionType" type="radio" value="Building underground &lt; 10 m"> Building underground &lt; 10 m<br>
-                                            <input name="ConstructionType" type="radio" value="Building underground &gt; 10 m"> Building underground &gt; 10 m<br>
-                                            <input name="ConstructionType" type="radio" value="Building rested"> Building rested<br>
-                                        </td>
-                                        <td style="width:35%">
-                                            <div name="time">
-                                                <label style="width:30%">Time weight:</label>
-                                                <input type="number" id="timewight" name="timewight" style="width:30%"> %
-                                                <br>
-                                                <label style="width:30%">Target year:</label>
-                                                <input type="number" id="targetyear" name="targetyear" style="width:30%"> days
-                                                <br>
-                                                <label style="width:30%">Construction Time:</label>
-                                                <input type="number" id="projectperiod" name="projectperiod" style="width:30%"> days
-                                                <br>
-                                                <br>
-                                                <button type="button" id="btncalculatetimevalue" style="background-color: cornsilk;width:30%">Time Value</button>
-                                                <input type="text" id="timevalue" name="timevalue" style="width:30%"> %
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <h3 style="color: green"> Cost </h3>
-                                                <br>
-                                                <div name="divCost" id="divCost">
-                                                    <label style="width:30%">Cost weight</label>
-                                                    <input type="text" id="txtCostWeight" name="txtCostWeight" style="width:30%" disabled> %
-                                                    <br>
-                                                    <label style="width:30%">Initial</label>
-                                                    <input type="text" id="txtinitialcost" name="txtinitialcost" style="width:30%"> $/m
-                                                    <br>
-                                                    <label style="width:30%">Construction</label>
-                                                    <input type="text" id="txtConstructionCost" name="txtConstructionCost" style="width:30%"> $/m
-                                                    <br>
-                                                    <label style="width:30%">Maintaince</label>
-                                                    <input type="text" id="txtMaintanaceCost" name="txtMaintanaceCost" style="width:30%"> $/m
-                                                    <br>
-                                                </div>
-                                                <br>
-                                                <button type="button" id="btnEvaluatetotalcost" style="background-color:cornsilk;width:30%">Cost value</button>
-                                                <input type="text" id="txtCostTotal" name="txtCostTotal" style="width:30%"><label>%</label>
-                                                <br>
-                                                <input type="text" id="txtunit" name="txtunit" style="width:30%;visibility: hidden">
-                                            </div>
-                                        </td>
-                                        <td style="width:35%">
-                                            <div>
-                                                <br>
-                                                <h6 style="color:blue">Enviroment</h6>
-                                                <label style="width:50%">Noise pollution:</label><input type="text" id="txtnoise" name="txtnoise" style="width:20%">
-                                                <input type="text" id="txtnoisePercentage" name="txtnoisePercentage" style="width:20%"> %
-                                                <br>
-                                                <label style="width:50%">Air pollution:</label><input type="text" id="txtair" name="txtair" style="width:20%">
-                                                <input type="text" id="txtairPercentage" name="txtairPercentage" style="width:20%"> %
-                                                <br>
-                                                <label style="width:50%">Soil pollution:</label><input type="text" id="txtsoil" name="txtsoil" style="width:20%">
-                                                <input type="text" id="txtsoilPercentage" name="txtsoilPercentage" style="width:20%"> %
-                                                <br>
-                                                <label style="width:50%">Heat pollution:</label><input type="text" id="txtheat" name="txtheat" style="width:20%">
-                                                <input type="text" id="txtheatPercentage" name="txtheatPercentage" style="width:20%"> %
-                                                <br>
-                                                <label style="width:49%">Ground water pollution:</label>
-                                                <input type="text" id="txtgroundwater" name="txtgroundwater" style="width:20%">
-                                                <input type="text" id="txtgroundwaterPercentage" name="txtgroundwaterPercentage" style="width:20%">
-                                            </div>
-                                            <div name="Value">
-                                                <label style="width:50%">Performance:</label><input type="text" id="performance" name="performance" style="width:50%">
-                                                <br>
-                                                <label style="width:50%">Quality:</label><input type="text" id="quality" name="quality" style="width:50%">
-                                                <br>
-                                                <label style="width:50%">Durability:</label><input type="text" id="durability" name="Durability" style="width:50%">
-                                                <br>
-                                                <br>
-                                                <button type="button" id="btnenvvalue" style="background-color: cornsilk;width:48%">Enviroment</button>
-                                                <input type="text" id="envvalue" name="envvalue" style="width:46%"> %
-                                                <div>
-                                                    <br>
-                                                    <br>
-                                                    <label style="width:50%;">Ability to construct</label><input type="text" id="txtAbConst" name="txtAbConst" style="width:50%">
-                                                    <br>
-                                                    <br>
-                                                    <label style="width:50%;color:red">Value</label><input type="text" id="txtAbConsttotal" name="txtAbConsttotal" style="width:50%">
-                                                    <br>
-                                                    <br>
-                                                    <button type="button" id="btnprojectvalue" style="background-color: cornsilk;width:48%">Project Value</button>
-                                                    <input type="text" id="txtprojectvalue" name="txtprojectvalue" style="width:47%">%
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width:35%">
-                                        </td>
-                                        <td style="width:35%">
-                                        </td>
-                                        <td style="width:35%">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width:35%">
-                                        </td>
-                                        <td style="width:35%"></td>
-                                        <td style="width:35%">
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div id="divresult" name="divresult" style="visibility: hidden;">
-                                <label style="color: #0b5ed7;font-size: medium">Project Brief</label>
                                 <br>
-                                <label> Total evaluation for this project is : </label><label id="txtProjectEvaluation"></label> %
+                                <h6 style="color: blue">Material</h6>
+                                <div style="width:50%">
+                                    <select id="ddlmaterial" name="ddlmaterial">
+                                        <option value="-1">Select Value</option>
+                                        <option value="1">UPVC</option>
+                                        <option value="2">HDPE</option>
+                                        <option value="3">Cast Iron</option>
+                                        <option value="4">Concrete</option>
+                                        <option value="5">Steel</option>
+                                        <option value="6">Clay</option>
+                                        <option value="7">Asbestos</option>
+                                    </select>
+                                </div>
                                 <br>
-                                <label style="color: #0a53be">This is :</label><label id="lblProjectID"> </label><label> Project </label>
+                                <h6 style="color: blue">Diameter</h6>
+                                <div style="width:50%">
+                                    <select id="ddldiameter" name="ddldiameter">
+                                        <option value="25">25</option>
+                                        <option value="32">32</option>
+                                        <option value="40">40</option>
+                                        <option value="50">50</option>
+                                        <option value="63">63</option>
+                                        <option value="75">75</option>
+                                        <option value="80">80</option>
+                                        <option value="100">100</option>
+                                        <option value="110">110</option>
+                                        <option value="125">125</option>
+                                        <option value="150">150</option>
+                                        <option value="160">160</option>
+                                        <option value="200">200</option>
+                                        <option value="250">250</option>
+                                        <option value="300">300</option>
+                                        <option value="350">350</option>
+                                        <option value="375">375</option>
+                                        <option value="400">400</option>
+                                        <option value="450">450</option>
+                                        <option value="500">500</option>
+                                        <option value="600">600</option>
+                                        <option value="700">700</option>
+                                        <option value="800">800</option>
+                                        <option value="900">900</option>
+                                        <option value="1000">1000</option>
+                                    </select> mm
+                                </div>
                                 <br>
-                                <label style="color: #0a53be"> Project Type :</label><label id="lblProjectType"></label>
-                                <br>
-                                <label style="color: #0a53be"> Construction Type :</label> <label id="lblConstructionType"></label>
-                                <br>
-                                <label style="color: #0a53be"> Material:</label>  <label id="lblMaterialType"></label>
+                                <h6 style="color:blue">Construction Type</h6>
+                                <input name="ConstructionType" type="radio" value="Building suspended" checked=""> Building suspended<br>
+                                <input name="ConstructionType" type="radio" value="Building underground &lt; 10 m"> Building underground &lt; 10 m<br>
+                                <input name="ConstructionType" type="radio" value="Building underground &gt; 10 m"> Building underground &gt; 10 m<br>
+                                <input name="ConstructionType" type="radio" value="Building rested"> Building rested<br>
                             </div>
-                        </main>
+         <table>
+        <tbody>
+            <tr>
+                <th style="width:35%;color:green;">Cost</th>
+                <th style="width:35%;color:green;"><h3> TIME </h3></th>
+                <th style="width:35%;color:green;"><h3> Value </h3></th>
+            </tr>
+            <tr>
+                <td style="width:35%">
+
+                    <br>
+                    <div name="divCost" id="divCost">
+                        <label style="width:30%">Cost weight</label>
+                        <input type="text" id="txtCostWeight" name="txtCostWeight" style="width:30%" disabled> %
+                        <br>
+                        <label style="width:30%">Initial</label>
+                        <input type="text" id="txtinitialcost" name="txtinitialcost" style="width:30%"> $/m
+                        <br>
+                        <label style="width:30%">Construction</label>
+                        <input type="text" id="txtConstructionCost" name="txtConstructionCost" style="width:30%"> $/m
+                        <br>
+                        <label style="width:30%">Maintaince</label>
+                        <input type="text" id="txtMaintanaceCost" name="txtMaintanaceCost" style="width:30%"> $/m
+                        <br>
+                    </div>
+                    <br>
+
+                </td>
+                <td style="width:35%">
+                    <div name="time">
+                        <label style="width:30%">Time weight:</label>
+                        <input type="number" id="timewight" name="timewight" style="width:30%"> %
+                        <br>
+                        <label style="width:30%">Target year:</label>
+                        <input type="number" id="targetyear" name="targetyear" style="width:30%"> days
+                        <br>
+                        <label style="width:30%">Construction Time:</label>
+                        <input type="number" id="projectperiod" name="projectperiod" style="width:30%"> days
+                        <br>
+                        <br>
+                        <button type="button" id="btncalculatetimevalue" style="background-color: cornsilk;width:30%">Time Value</button>
+                        <input type="text" id="timevalue" name="timevalue" style="width:30%"> %
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <h3 style="color: green"> Cost </h3>
+                        <br>
+                       
+                        <br>
+                        <button type="button" id="btnEvaluatetotalcost" style="background-color:cornsilk;width:30%">Cost value</button>
+                        <input type="text" id="txtCostTotal" name="txtCostTotal" style="width:30%"><label>%</label>
+                        <br>
+                        <input type="text" id="txtunit" name="txtunit" style="width:30%;visibility: hidden">
+                    </div>
+                </td>
+                <td style="width:35%">
+                    <div>
+                        <br>
+                        <h6 style="color:blue">Enviroment</h6>
+                        <label style="width:50%">Noise pollution:</label><input type="text" id="txtnoise" name="txtnoise" style="width:20%">
+                        <input type="text" id="txtnoisePercentage" name="txtnoisePercentage" style="width:20%"> %
+                        <br>
+                        <label style="width:50%">Air pollution:</label><input type="text" id="txtair" name="txtair" style="width:20%">
+                        <input type="text" id="txtairPercentage" name="txtairPercentage" style="width:20%"> %
+                        <br>
+                        <label style="width:50%">Soil pollution:</label><input type="text" id="txtsoil" name="txtsoil" style="width:20%">
+                        <input type="text" id="txtsoilPercentage" name="txtsoilPercentage" style="width:20%"> %
+                        <br>
+                        <label style="width:50%">Heat pollution:</label><input type="text" id="txtheat" name="txtheat" style="width:20%">
+                        <input type="text" id="txtheatPercentage" name="txtheatPercentage" style="width:20%"> %
+                        <br>
+                        <label style="width:49%">Ground water pollution:</label>
+                        <input type="text" id="txtgroundwater" name="txtgroundwater" style="width:20%">
+                        <input type="text" id="txtgroundwaterPercentage" name="txtgroundwaterPercentage" style="width:20%">
+                    </div>
+                    <div name="Value">
+                        <label style="width:50%">Performance:</label><input type="text" id="performance" name="performance" style="width:50%">
+                        <br>
+                        <label style="width:50%">Quality:</label><input type="text" id="quality" name="quality" style="width:50%">
+                        <br>
+                        <label style="width:50%">Durability:</label><input type="text" id="durability" name="Durability" style="width:50%">
+                        <br>
+                        <br>
+                        <button type="button" id="btnenvvalue" style="background-color: cornsilk;width:48%">Enviroment</button>
+                        <input type="text" id="envvalue" name="envvalue" style="width:46%"> %
+                        <div>
+                            <br>
+                            <br>
+                            <label style="width:50%;">Ability to construct</label><input type="text" id="txtAbConst" name="txtAbConst" style="width:50%">
+                            <br>
+                            <br>
+                            <label style="width:50%;color:red">Value</label><input type="text" id="txtAbConsttotal" name="txtAbConsttotal" style="width:50%">
+                            <br>
+                            <br>
+                            <button type="button" id="btnprojectvalue" style="background-color: cornsilk;width:48%">Project Value</button>
+                            <input type="text" id="txtprojectvalue" name="txtprojectvalue" style="width:47%">%
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:35%">
+                </td>
+                <td style="width:35%">
+                </td>
+                <td style="width:35%">
+                </td>
+            </tr>
+            <tr>
+                <td style="width:35%">
+                </td>
+                <td style="width:35%"></td>
+                <td style="width:35%">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="divresult" name="divresult" style="visibility: hidden;">
+        <label style="color: #0b5ed7;font-size: medium">Project Brief</label>
+        <br>
+        <label> Total evaluation for this project is : </label><label id="txtProjectEvaluation"></label> %
+        <br>
+        <label style="color: #0a53be">This is :</label><label id="lblProjectID"> </label><label> Project </label>
+        <br>
+        <label style="color: #0a53be"> Project Type :</label><label id="lblProjectType"></label>
+        <br>
+        <label style="color: #0a53be"> Construction Type :</label> <label id="lblConstructionType"></label>
+        <br>
+        <label style="color: #0a53be"> Material:</label>  <label id="lblMaterialType"></label>
+    </div>
+</main>
                     </div>
 
                     <footer b-0r8dmesa67="" class="border-top footer text-muted">
